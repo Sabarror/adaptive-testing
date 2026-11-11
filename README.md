@@ -8,21 +8,27 @@ Python 3.13.3. Команды ниже выполняются из папки п
 
 Создайте виртуальное окружение и установите зависимости:
 
+```powershell
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
+```
 
 Создайте конфигурацию и сгенерируйте секретный ключ:
 
+```powershell
 Copy-Item .env.example .env
 .\.venv\Scripts\python -c "from pathlib import Path; import secrets; p=Path('.env'); p.write_text(p.read_text().replace('replace-with-a-random-local-secret', secrets.token_urlsafe(50)), encoding='utf-8')"
+```
 
 Если файл `.env` уже настроен, пропустите его создание.
 
 Примените миграции, загрузите демонстрационные данные и запустите сервер:
 
+```powershell
 .\.venv\Scripts\python manage.py migrate
 .\.venv\Scripts\python manage.py seed_demo
 .\.venv\Scripts\python manage.py runserver --insecure
+```
 
 Откройте http://127.0.0.1:8000/. Для остановки сервера нажмите `Ctrl+C`.
 
@@ -42,7 +48,9 @@ Copy-Item .env.example .env
 
 ## Повторный запуск
 
+```powershell
 .\.venv\Scripts\python manage.py runserver --insecure
+```
 
 Для работы в cmd замените `Copy-Item .env.example .env` на `copy .env.example .env`. Остальные приведённые команды совпадают.
 
