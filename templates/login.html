@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class="login card"><p class="eyebrow">Информационная система</p><h1>Контроль знаний студентов</h1><p>Войдите в учётную запись, выданную преподавателем.</p><form method="post">{% csrf_token %}{{ form.as_p }}<button>Войти</button></form></section>{% endblock %}

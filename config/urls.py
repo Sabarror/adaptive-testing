@@ -1,0 +1,5 @@
+from django.contrib import admin
+from django.contrib.auth import views as auth
+from django.urls import path
+from testing import views as v
+urlpatterns = [path('admin/',admin.site.urls), path('login/',auth.LoginView.as_view(template_name='login.html'),name='login'),path('logout/',auth.LogoutView.as_view(),name='logout'),path('',v.home,name='home'),path('tests/<int:pk>/start/',v.start,name='start'),path('attempts/<int:pk>/',v.attempt,name='attempt'),path('attempts/<int:pk>/abort/',v.abort,name='abort'),path('attempts/<int:pk>/result/',v.result,name='result'),path('history/',v.history,name='history'),path('teacher/',v.manage,name='manage'),path('teacher/questions/new/',v.edit_question,name='question_new'),path('teacher/questions/<int:pk>/',v.edit_question,name='question_edit'),path('teacher/tests/new/',v.edit_test,name='test_new'),path('teacher/tests/<int:pk>/',v.edit_test,name='test_edit'),path('teacher/results/',v.results,name='results'),path('teacher/sandbox/',v.sandbox,name='sandbox')]
