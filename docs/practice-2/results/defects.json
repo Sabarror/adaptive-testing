@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "id": "D1",
+      "origin": "educational",
+      "test": "testing.test_practice2.WhiteBoxTests.test_strategy_paths_and_clamps",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "id": "D2",
+      "origin": "real",
+      "test": "testing.test_practice2.IntegrationTests.test_start_integrity_failure_reports_scenario_and_rolls_back",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "id": "D3",
+      "origin": "educational",
+      "test": "testing.tests.ScenarioTests.test_complete_and_no_repeated_questions",
+      "before": 1,
+      "after": 0
+    }
+  ],
+  "source_hashes": {
+    "testing\\domain.py": "03ab301505491bbbe23e3df36877ff3938f1555cd632bf9c104431adac351998",
+    "testing\\services.py": "1b03b50ee4183a1ac154ba017787d267ae2f595a5a874b18b7d5ff88c711d1b2"
+  },
+  "source_unchanged": true
+}

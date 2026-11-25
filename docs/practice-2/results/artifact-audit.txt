@@ -1,0 +1,1 @@
+PASS: 19 source hashes; saved exit codes; 3 fail/pass defects; 3 equal benchmark signatures; all 17 CFG basis paths; document links; diagram sources/SVG; no database or .env in artifacts; 51-test final log.

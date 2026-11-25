@@ -32,13 +32,20 @@ class AttemptManager:
         try:
             with transaction.atomic():
                 a = Attempt.objects.create(student=student, test=test, title=test.title, length=test.length, initial=test.initial)
-                for q, options in bank:
-                    AttemptQuestion.objects.create(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)
+                # Snapshot fields are already checked by valid_bank; no custom save/signals.
+                # Keep insertion order and the surrounding transaction for seeded selection.
+                AttemptQuestion.objects.bulk_create([
+                    AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)
+                    for q, options in bank
+                ])
                 self._choose(a, a.initial, 1)
                 a.save(update_fields=['current'])
                 return a
-        except IntegrityError:
-            return Attempt.objects.get(student=student, test=test, state='IN_PROGRESS')
+        except IntegrityError as exc:
+            existing = Attempt.objects.filter(student=student, test=test, state='IN_PROGRESS').first()
+            if existing:
+                return existing
+            raise ScenarioError('Не удалось создать попытку. Повторите действие.') from exc
         except OperationalError as exc: raise ScenarioError('База занята. Повторите действие.') from exc
     def answer(self, attempt_id, student, question_id, selected):
         try:

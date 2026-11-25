@@ -1,0 +1,74 @@
+{
+  "StepAdaptiveStrategy.next_target": {
+    "start_line": 11,
+    "summary": {
+      "covered_lines": 1,
+      "num_statements": 1,
+      "percent_covered": 100.0,
+      "percent_covered_display": "100",
+      "missing_lines": 0,
+      "excluded_lines": 0,
+      "percent_statements_covered": 100.0,
+      "percent_statements_covered_display": "100",
+      "num_branches": 0,
+      "num_partial_branches": 0,
+      "covered_branches": 0,
+      "missing_branches": 0,
+      "percent_branches_covered": 100.0,
+      "percent_branches_covered_display": "100"
+    },
+    "missing_lines": [],
+    "missing_branches": []
+  },
+  "valid_bank": {
+    "start_line": 9,
+    "summary": {
+      "covered_lines": 6,
+      "num_statements": 6,
+      "percent_covered": 100.0,
+      "percent_covered_display": "100",
+      "missing_lines": 0,
+      "excluded_lines": 0,
+      "percent_statements_covered": 100.0,
+      "percent_statements_covered_display": "100",
+      "num_branches": 4,
+      "num_partial_branches": 0,
+      "covered_branches": 4,
+      "missing_branches": 0,
+      "percent_branches_covered": 100.0,
+      "percent_branches_covered_display": "100"
+    },
+    "missing_lines": [],
+    "missing_branches": []
+  },
+  "AttemptManager.answer": {
+    "start_line": 50,
+    "summary": {
+      "covered_lines": 15,
+      "num_statements": 15,
+      "percent_covered": 90.47619047619048,
+      "percent_covered_display": "90",
+      "missing_lines": 0,
+      "excluded_lines": 0,
+      "percent_statements_covered": 100.0,
+      "percent_statements_covered_display": "100",
+      "num_branches": 6,
+      "num_partial_branches": 2,
+      "covered_branches": 4,
+      "missing_branches": 2,
+      "percent_branches_covered": 66.66666666666667,
+      "percent_branches_covered_display": "67"
+    },
+    "missing_lines": [],
+    "missing_branches": [
+      [
+        55,
+        66
+      ],
+      [
+        58,
+        66
+      ]
+    ]
+  }
+}

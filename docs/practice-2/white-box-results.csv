@@ -1,0 +1,34 @@
+﻿ID,method,input,expected,path,fact,status
+WB-A1,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""accept"", ""expected"": true, ""fact"": true, ""status"": ""PASS""}",accepted; next question,A4: e cas u load v ans last choose save ret x,accepted; next question,PASS
+WB-A2,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""foreign"", ""expected"": false, ""fact"": false, ""status"": ""PASS""}",ScenarioError; unchanged,A1: e cas u stale x,ScenarioError; unchanged,PASS
+WB-A3,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""completed"", ""expected"": false, ""fact"": false, ""status"": ""PASS""}",ScenarioError; unchanged,A1: e cas u stale x,ScenarioError; unchanged,PASS
+WB-A4,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""aborted"", ""expected"": false, ""fact"": false, ""status"": ""PASS""}",ScenarioError; unchanged,A1: e cas u stale x,ScenarioError; unchanged,PASS
+WB-A5,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""old_question"", ""expected"": false, ""fact"": false, ""status"": ""PASS""}",ScenarioError; unchanged,A1: e cas u stale x,ScenarioError; unchanged,PASS
+WB-A6,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""option_-1"", ""expected"": false, ""fact"": false, ""status"": ""PASS""}",ScenarioError; unchanged,A2: e cas u load v invalid x,ScenarioError; unchanged,PASS
+WB-A7,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""option_0"", ""expected"": true, ""fact"": true, ""status"": ""PASS""}",accepted; next question,A4: e cas u load v ans last choose save ret x,accepted; next question,PASS
+WB-A8,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""option_1"", ""expected"": true, ""fact"": true, ""status"": ""PASS""}",accepted; next question,A4: e cas u load v ans last choose save ret x,accepted; next question,PASS
+WB-A9,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""option_2"", ""expected"": true, ""fact"": true, ""status"": ""PASS""}",accepted; next question,A4: e cas u load v ans last choose save ret x,accepted; next question,PASS
+WB-A10,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""option_3"", ""expected"": true, ""fact"": true, ""status"": ""PASS""}",accepted; next question,A4: e cas u load v ans last choose save ret x,accepted; next question,PASS
+WB-A11,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""option_4"", ""expected"": false, ""fact"": false, ""status"": ""PASS""}",ScenarioError; unchanged,A2: e cas u load v invalid x,ScenarioError; unchanged,PASS
+WB-A-error-12,AttemptManager.answer,"{""site"": ""cas"", ""error"": ""IntegrityError"", ""rollback"": true}","ScenarioError, rollback",A5: e cas handler x,True,PASS
+WB-A-error-13,AttemptManager.answer,"{""site"": ""cas"", ""error"": ""OperationalError"", ""rollback"": true}","ScenarioError, rollback",A5: e cas handler x,True,PASS
+WB-A-error-14,AttemptManager.answer,"{""site"": ""load"", ""error"": ""IntegrityError"", ""rollback"": true}","ScenarioError, rollback",A6: e cas u load handler x,True,PASS
+WB-A-error-15,AttemptManager.answer,"{""site"": ""load"", ""error"": ""OperationalError"", ""rollback"": true}","ScenarioError, rollback",A6: e cas u load handler x,True,PASS
+WB-A-error-16,AttemptManager.answer,"{""site"": ""insert"", ""error"": ""IntegrityError"", ""rollback"": true}","ScenarioError, rollback",A7: e cas u load v ans handler x,True,PASS
+WB-A-error-17,AttemptManager.answer,"{""site"": ""insert"", ""error"": ""OperationalError"", ""rollback"": true}","ScenarioError, rollback",A7: e cas u load v ans handler x,True,PASS
+WB-A-error-18,AttemptManager.answer,"{""site"": ""choose"", ""error"": ""IntegrityError"", ""rollback"": true}","ScenarioError, rollback",A8: e cas u load v ans last choose handler x,True,PASS
+WB-A-error-19,AttemptManager.answer,"{""site"": ""choose"", ""error"": ""OperationalError"", ""rollback"": true}","ScenarioError, rollback",A8: e cas u load v ans last choose handler x,True,PASS
+WB-A-error-20,AttemptManager.answer,"{""site"": ""save"", ""error"": ""IntegrityError"", ""rollback"": true}","ScenarioError, rollback",A9: e cas u load v ans last choose save handler x,True,PASS
+WB-A-error-21,AttemptManager.answer,"{""site"": ""save"", ""error"": ""OperationalError"", ""rollback"": true}","ScenarioError, rollback",A9: e cas u load v ans last choose save handler x,True,PASS
+WB-A42,AttemptManager.answer,"{""id"": ""BB-A"", ""rule"": ""last"", ""expected"": ""COMPLETED"", ""fact"": ""COMPLETED"", ""status"": ""PASS""}",COMPLETED,A3: e cas u load v ans last complete save ret x,COMPLETED,PASS
+WB-B-43,valid_bank,"{""n"": 3, ""correct_count"": 1, ""level"": 3, ""conditions"": [false, null, null, null], ""observed_reads"": [], ""accepted"": false}",False,B2: e l o a l r x,False,PASS
+WB-B-44,valid_bank,"{""n"": 4, ""correct_count"": 0, ""level"": 3, ""conditions"": [true, false, null, null], ""observed_reads"": [""B"", ""B"", ""B"", ""B""], ""accepted"": false}",False,B3: e l o a b l r x,False,PASS
+WB-B-45,valid_bank,"{""n"": 4, ""correct_count"": 1, ""level"": 0, ""conditions"": [true, true, false, null], ""observed_reads"": [""B"", ""B"", ""B"", ""B"", ""C""], ""accepted"": false}",False,B4: e l o a b c l r x,False,PASS
+WB-B-46,valid_bank,"{""n"": 4, ""correct_count"": 1, ""level"": 6, ""conditions"": [true, true, true, false], ""observed_reads"": [""B"", ""B"", ""B"", ""B"", ""C"", ""D""], ""accepted"": false}",False,B5: e l o a b c d l r x,False,PASS
+WB-B-47,valid_bank,"{""n"": 4, ""correct_count"": 1, ""level"": 1, ""conditions"": [true, true, true, true], ""observed_reads"": [""B"", ""B"", ""B"", ""B"", ""C"", ""D""], ""accepted"": true}",True,B6: e l o a b c d t l r x,True,PASS
+WB-B-48,valid_bank,"{""n"": 4, ""correct_count"": 1, ""level"": 5, ""conditions"": [true, true, true, true], ""observed_reads"": [""B"", ""B"", ""B"", ""B"", ""C"", ""D""], ""accepted"": true}",True,B6: e l o a b c d t l r x,True,PASS
+WB-B-49,valid_bank,"{""n"": 0, ""correct_count"": 0, ""level"": null, ""conditions"": [], ""accepted"": false}",False,B1: e l r x,False,PASS
+WB-S-50,StepAdaptiveStrategy.next_target,"{""actual"": 1, ""correct"": false, ""expected"": 1}",1,S2: e c d cl x,1,PASS
+WB-S-51,StepAdaptiveStrategy.next_target,"{""actual"": 1, ""correct"": true, ""expected"": 2}",2,S1: e c i cl x,2,PASS
+WB-S-52,StepAdaptiveStrategy.next_target,"{""actual"": 5, ""correct"": true, ""expected"": 5}",5,S1: e c i cl x,5,PASS
+WB-S-53,StepAdaptiveStrategy.next_target,"{""actual"": 5, ""correct"": false, ""expected"": 4}",4,S2: e c d cl x,4,PASS

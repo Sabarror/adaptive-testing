@@ -1,0 +1,170 @@
+Found 1 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: messages, staticfiles
+  Apply all migrations: admin, auth, contenttypes, sessions, testing
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+  Applying testing.0001_initial... OK
+System check identified no issues (0 silenced).
+TRACE {"event": "line", "line": 27, "code": "existing = Attempt.objects.filter(student=student, test=test, state='IN_PROGRESS').first()", "locals": {}}
+TRACE {"event": "line", "line": 28, "code": "if existing: return existing", "locals": {}}
+TRACE {"event": "line", "line": 29, "code": "if not test.published: raise ScenarioError('Тест снят с публикации.')", "locals": {}}
+TRACE {"event": "line", "line": 30, "code": "bank = valid_bank(test)", "locals": {}}
+TRACE {"event": "line", "line": 31, "code": "if len(bank) < test.length: raise ScenarioError(f'Недостаточно активных корректных вопросов: {len(bank)}, требуется {test.length}.')", "locals": {}}
+TRACE {"event": "line", "line": 32, "code": "try:", "locals": {}}
+TRACE {"event": "line", "line": 33, "code": "with transaction.atomic():", "locals": {}}
+TRACE {"event": "line", "line": 34, "code": "a = Attempt.objects.create(student=student, test=test, title=test.title, length=test.length, initial=test.initial)", "locals": {}}
+TRACE {"event": "line", "line": 37, "code": "AttemptQuestion.objects.bulk_create([", "locals": {"a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 37, "code": "AttemptQuestion.objects.bulk_create([", "locals": {"a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"q": {"pk": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"q": {"pk": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"q": {"pk": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 4}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 4}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 4}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 4}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 4}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"q": {"pk": 4}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 5}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 5}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 5}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 5}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 5}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"q": {"pk": 5}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 6}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 6}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 6}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 6}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 6}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"q": {"pk": 6}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 7}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 7}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 7}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 7}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 7}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"q": {"pk": 7}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 8}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 8}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 8}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 8}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 8}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"q": {"pk": 8}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 9}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 9}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 9}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 9}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 9}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"q": {"pk": 9}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 10}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 10}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 10}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 10}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 38, "code": "AttemptQuestion(attempt=a, source_id=q.pk, text=q.text, difficulty=q.difficulty, options=[o.text for o in options], correct=next(i for i,o in enumerate(options) if o.correct), explanation=q.explanation)", "locals": {"q": {"pk": 10}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 39, "code": "for q, options in bank", "locals": {"q": {"pk": 10}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 37, "code": "AttemptQuestion.objects.bulk_create([", "locals": {"q": {"pk": 10}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 41, "code": "self._choose(a, a.initial, 1)", "locals": {"a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 42, "code": "a.save(update_fields=['current'])", "locals": {"a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 43, "code": "return a", "locals": {"a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 33, "code": "with transaction.atomic():", "locals": {"a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "return", "line": 33, "code": "with transaction.atomic():", "locals": {"a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 51, "code": "try:", "locals": {"selected": 2}}
+TRACE {"event": "line", "line": 52, "code": "with transaction.atomic():", "locals": {"selected": 2}}
+TRACE {"event": "line", "line": 54, "code": "updated = Attempt.objects.filter(pk=attempt_id, student=student, state='IN_PROGRESS', current_id=question_id).update(revision=F('revision')+1)", "locals": {"selected": 2}}
+TRACE {"event": "line", "line": 55, "code": "if not updated: raise ScenarioError('Ответ уже принят или вопрос больше не является текущим.')", "locals": {"selected": 2, "updated": 1}}
+TRACE {"event": "line", "line": 56, "code": "a = Attempt.objects.get(pk=attempt_id)", "locals": {"selected": 2, "updated": 1}}
+TRACE {"event": "line", "line": 57, "code": "q = a.current", "locals": {"selected": 2, "updated": 1, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 58, "code": "if selected not in range(4): raise ScenarioError('Выберите один из четырёх вариантов.')", "locals": {"selected": 2, "updated": 1, "q": {"pk": 3, "step": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 59, "code": "Answer.objects.create(question=q, selected=selected, correct=selected == q.correct, difficulty=q.difficulty, elapsed_seconds=max(0, (timezone.now()-q.shown).total_seconds()))", "locals": {"selected": 2, "updated": 1, "q": {"pk": 3, "step": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 60, "code": "if q.step > a.length:", "locals": {"selected": 2, "updated": 1, "q": {"pk": 3, "step": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 63, "code": "self._choose(a, self.engine.next_target(q.difficulty, selected == q.correct), q.step+1)", "locals": {"selected": 2, "updated": 1, "q": {"pk": 3, "step": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 64, "code": "a.save(update_fields=['state', 'finished', 'current'])", "locals": {"selected": 2, "updated": 1, "q": {"pk": 3, "step": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 65, "code": "return a", "locals": {"selected": 2, "updated": 1, "q": {"pk": 3, "step": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 52, "code": "with transaction.atomic():", "locals": {"selected": 2, "updated": 1, "q": {"pk": 3, "step": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "return", "line": 52, "code": "with transaction.atomic():", "locals": {"selected": 2, "updated": 1, "q": {"pk": 3, "step": 1}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 51, "code": "try:", "locals": {"selected": 2}}
+TRACE {"event": "line", "line": 52, "code": "with transaction.atomic():", "locals": {"selected": 2}}
+TRACE {"event": "line", "line": 54, "code": "updated = Attempt.objects.filter(pk=attempt_id, student=student, state='IN_PROGRESS', current_id=question_id).update(revision=F('revision')+1)", "locals": {"selected": 2}}
+TRACE {"event": "line", "line": 55, "code": "if not updated: raise ScenarioError('Ответ уже принят или вопрос больше не является текущим.')", "locals": {"selected": 2, "updated": 1}}
+TRACE {"event": "line", "line": 56, "code": "a = Attempt.objects.get(pk=attempt_id)", "locals": {"selected": 2, "updated": 1}}
+TRACE {"event": "line", "line": 57, "code": "q = a.current", "locals": {"selected": 2, "updated": 1, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 58, "code": "if selected not in range(4): raise ScenarioError('Выберите один из четырёх вариантов.')", "locals": {"selected": 2, "updated": 1, "q": {"pk": 9, "step": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 59, "code": "Answer.objects.create(question=q, selected=selected, correct=selected == q.correct, difficulty=q.difficulty, elapsed_seconds=max(0, (timezone.now()-q.shown).total_seconds()))", "locals": {"selected": 2, "updated": 1, "q": {"pk": 9, "step": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 60, "code": "if q.step > a.length:", "locals": {"selected": 2, "updated": 1, "q": {"pk": 9, "step": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 63, "code": "self._choose(a, self.engine.next_target(q.difficulty, selected == q.correct), q.step+1)", "locals": {"selected": 2, "updated": 1, "q": {"pk": 9, "step": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 64, "code": "a.save(update_fields=['state', 'finished', 'current'])", "locals": {"selected": 2, "updated": 1, "q": {"pk": 9, "step": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 65, "code": "return a", "locals": {"selected": 2, "updated": 1, "q": {"pk": 9, "step": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 52, "code": "with transaction.atomic():", "locals": {"selected": 2, "updated": 1, "q": {"pk": 9, "step": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "return", "line": 52, "code": "with transaction.atomic():", "locals": {"selected": 2, "updated": 1, "q": {"pk": 9, "step": 2}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 51, "code": "try:", "locals": {"selected": 2}}
+TRACE {"event": "line", "line": 52, "code": "with transaction.atomic():", "locals": {"selected": 2}}
+TRACE {"event": "line", "line": 54, "code": "updated = Attempt.objects.filter(pk=attempt_id, student=student, state='IN_PROGRESS', current_id=question_id).update(revision=F('revision')+1)", "locals": {"selected": 2}}
+TRACE {"event": "line", "line": 55, "code": "if not updated: raise ScenarioError('Ответ уже принят или вопрос больше не является текущим.')", "locals": {"selected": 2, "updated": 1}}
+TRACE {"event": "line", "line": 56, "code": "a = Attempt.objects.get(pk=attempt_id)", "locals": {"selected": 2, "updated": 1}}
+TRACE {"event": "line", "line": 57, "code": "q = a.current", "locals": {"selected": 2, "updated": 1, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 58, "code": "if selected not in range(4): raise ScenarioError('Выберите один из четырёх вариантов.')", "locals": {"selected": 2, "updated": 1, "q": {"pk": 5, "step": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 59, "code": "Answer.objects.create(question=q, selected=selected, correct=selected == q.correct, difficulty=q.difficulty, elapsed_seconds=max(0, (timezone.now()-q.shown).total_seconds()))", "locals": {"selected": 2, "updated": 1, "q": {"pk": 5, "step": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 60, "code": "if q.step > a.length:", "locals": {"selected": 2, "updated": 1, "q": {"pk": 5, "step": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 63, "code": "self._choose(a, self.engine.next_target(q.difficulty, selected == q.correct), q.step+1)", "locals": {"selected": 2, "updated": 1, "q": {"pk": 5, "step": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 64, "code": "a.save(update_fields=['state', 'finished', 'current'])", "locals": {"selected": 2, "updated": 1, "q": {"pk": 5, "step": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 65, "code": "return a", "locals": {"selected": 2, "updated": 1, "q": {"pk": 5, "step": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "line", "line": 52, "code": "with transaction.atomic():", "locals": {"selected": 2, "updated": 1, "q": {"pk": 5, "step": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+TRACE {"event": "return", "line": 52, "code": "with transaction.atomic():", "locals": {"selected": 2, "updated": 1, "q": {"pk": 5, "step": 3}, "a": {"pk": 1, "length": 3, "state": "IN_PROGRESS"}}}
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+test_complete_and_no_repeated_questions (testing.tests.ScenarioTests.test_complete_and_no_repeated_questions) ... FAIL
+
+======================================================================
+FAIL: test_complete_and_no_repeated_questions (testing.tests.ScenarioTests.test_complete_and_no_repeated_questions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\adaptive-testing\testing\tests.py", line 101, in test_complete_and_no_repeated_questions
+    self.assertEqual(a.state,'COMPLETED'); self.assertIsNone(a.current)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'IN_PROGRESS' != 'COMPLETED'
+- IN_PROGRESS
++ COMPLETED
+
+
+----------------------------------------------------------------------
+Ran 1 test in 2.444s
+
+FAILED (failures=1)
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+

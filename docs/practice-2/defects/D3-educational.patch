@@ -1,0 +1,11 @@
+--- a/testing/services.py
++++ b/testing/services.py
+@@ -57,7 +57,7 @@
+                 q = a.current
+                 if selected not in range(4): raise ScenarioError('Выберите один из четырёх вариантов.')
+                 Answer.objects.create(question=q, selected=selected, correct=selected == q.correct, difficulty=q.difficulty, elapsed_seconds=max(0, (timezone.now()-q.shown).total_seconds()))
+-                if q.step >= a.length:
++                if q.step > a.length:
+                     a.state, a.finished, a.current = 'COMPLETED', timezone.now(), None
+                 else:
+                     self._choose(a, self.engine.next_target(q.difficulty, selected == q.correct), q.step+1)

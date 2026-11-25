@@ -1,0 +1,10 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python",
+    "manage.py",
+    "test",
+    "--verbosity",
+    "2"
+  ],
+  "exit_code": 0
+}

@@ -1,0 +1,479 @@
+[
+  {
+    "id": "BB-A",
+    "rule": "accept",
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "foreign",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "completed",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "aborted",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "old_question",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "option_-1",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "option_0",
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "option_1",
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "option_2",
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "option_3",
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "option_4",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-A-error",
+    "site": "cas",
+    "error": "IntegrityError",
+    "rollback": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-A-error",
+    "site": "cas",
+    "error": "OperationalError",
+    "rollback": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-A-error",
+    "site": "load",
+    "error": "IntegrityError",
+    "rollback": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-A-error",
+    "site": "load",
+    "error": "OperationalError",
+    "rollback": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-A-error",
+    "site": "insert",
+    "error": "IntegrityError",
+    "rollback": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-A-error",
+    "site": "insert",
+    "error": "OperationalError",
+    "rollback": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-A-error",
+    "site": "choose",
+    "error": "IntegrityError",
+    "rollback": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-A-error",
+    "site": "choose",
+    "error": "OperationalError",
+    "rollback": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-A-error",
+    "site": "save",
+    "error": "IntegrityError",
+    "rollback": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-A-error",
+    "site": "save",
+    "error": "OperationalError",
+    "rollback": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "initial",
+    "value": 0,
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "initial",
+    "value": 1,
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "initial",
+    "value": 2,
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "initial",
+    "value": 4,
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "initial",
+    "value": 5,
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "initial",
+    "value": 6,
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "initial",
+    "value": "abc",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "initial",
+    "value": "1.5",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "initial",
+    "value": "",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "initial",
+    "value": null,
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "length",
+    "value": 0,
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "length",
+    "value": 1,
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "length",
+    "value": 2,
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "length",
+    "value": 99,
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "length",
+    "value": 100,
+    "expected": true,
+    "fact": true,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "length",
+    "value": 101,
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "length",
+    "value": "abc",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "length",
+    "value": "1.5",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "length",
+    "value": "",
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-F",
+    "field": "length",
+    "value": null,
+    "expected": false,
+    "fact": false,
+    "status": "PASS"
+  },
+  {
+    "id": "BB-A",
+    "rule": "last",
+    "expected": "COMPLETED",
+    "fact": "COMPLETED",
+    "status": "PASS"
+  },
+  {
+    "id": "WB-B",
+    "n": 3,
+    "correct_count": 1,
+    "level": 3,
+    "conditions": [
+      false,
+      null,
+      null,
+      null
+    ],
+    "observed_reads": [],
+    "accepted": false,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-B",
+    "n": 4,
+    "correct_count": 0,
+    "level": 3,
+    "conditions": [
+      true,
+      false,
+      null,
+      null
+    ],
+    "observed_reads": [
+      "B",
+      "B",
+      "B",
+      "B"
+    ],
+    "accepted": false,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-B",
+    "n": 4,
+    "correct_count": 1,
+    "level": 0,
+    "conditions": [
+      true,
+      true,
+      false,
+      null
+    ],
+    "observed_reads": [
+      "B",
+      "B",
+      "B",
+      "B",
+      "C"
+    ],
+    "accepted": false,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-B",
+    "n": 4,
+    "correct_count": 1,
+    "level": 6,
+    "conditions": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "observed_reads": [
+      "B",
+      "B",
+      "B",
+      "B",
+      "C",
+      "D"
+    ],
+    "accepted": false,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-B",
+    "n": 4,
+    "correct_count": 1,
+    "level": 1,
+    "conditions": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "observed_reads": [
+      "B",
+      "B",
+      "B",
+      "B",
+      "C",
+      "D"
+    ],
+    "accepted": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-B",
+    "n": 4,
+    "correct_count": 1,
+    "level": 5,
+    "conditions": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "observed_reads": [
+      "B",
+      "B",
+      "B",
+      "B",
+      "C",
+      "D"
+    ],
+    "accepted": true,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-B",
+    "n": 0,
+    "correct_count": 0,
+    "level": null,
+    "conditions": [],
+    "accepted": false,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-S",
+    "actual": 1,
+    "correct": false,
+    "expected": 1,
+    "fact": 1,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-S",
+    "actual": 1,
+    "correct": true,
+    "expected": 2,
+    "fact": 2,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-S",
+    "actual": 5,
+    "correct": true,
+    "expected": 5,
+    "fact": 5,
+    "status": "PASS"
+  },
+  {
+    "id": "WB-S",
+    "actual": 5,
+    "correct": false,
+    "expected": 4,
+    "fact": 4,
+    "status": "PASS"
+  }
+]

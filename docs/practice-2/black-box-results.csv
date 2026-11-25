@@ -1,0 +1,33 @@
+﻿ID,method,input,expected,path,fact,status
+BB-A-1,AttemptManager.answer,"{""rule"": ""accept"", ""expected"": true}",True,accept,True,PASS
+BB-A-2,AttemptManager.answer,"{""rule"": ""foreign"", ""expected"": false}",False,foreign,False,PASS
+BB-A-3,AttemptManager.answer,"{""rule"": ""completed"", ""expected"": false}",False,completed,False,PASS
+BB-A-4,AttemptManager.answer,"{""rule"": ""aborted"", ""expected"": false}",False,aborted,False,PASS
+BB-A-5,AttemptManager.answer,"{""rule"": ""old_question"", ""expected"": false}",False,old_question,False,PASS
+BB-A-6,AttemptManager.answer,"{""rule"": ""option_-1"", ""expected"": false}",False,option_-1,False,PASS
+BB-A-7,AttemptManager.answer,"{""rule"": ""option_0"", ""expected"": true}",True,option_0,True,PASS
+BB-A-8,AttemptManager.answer,"{""rule"": ""option_1"", ""expected"": true}",True,option_1,True,PASS
+BB-A-9,AttemptManager.answer,"{""rule"": ""option_2"", ""expected"": true}",True,option_2,True,PASS
+BB-A-10,AttemptManager.answer,"{""rule"": ""option_3"", ""expected"": true}",True,option_3,True,PASS
+BB-A-11,AttemptManager.answer,"{""rule"": ""option_4"", ""expected"": false}",False,option_4,False,PASS
+BB-F-22,TestForm,"{""field"": ""initial"", ""value"": 0, ""expected"": false}",False,field validation,False,PASS
+BB-F-23,TestForm,"{""field"": ""initial"", ""value"": 1, ""expected"": true}",True,field validation,True,PASS
+BB-F-24,TestForm,"{""field"": ""initial"", ""value"": 2, ""expected"": true}",True,field validation,True,PASS
+BB-F-25,TestForm,"{""field"": ""initial"", ""value"": 4, ""expected"": true}",True,field validation,True,PASS
+BB-F-26,TestForm,"{""field"": ""initial"", ""value"": 5, ""expected"": true}",True,field validation,True,PASS
+BB-F-27,TestForm,"{""field"": ""initial"", ""value"": 6, ""expected"": false}",False,field validation,False,PASS
+BB-F-28,TestForm,"{""field"": ""initial"", ""value"": ""abc"", ""expected"": false}",False,field validation,False,PASS
+BB-F-29,TestForm,"{""field"": ""initial"", ""value"": ""1.5"", ""expected"": false}",False,field validation,False,PASS
+BB-F-30,TestForm,"{""field"": ""initial"", ""value"": """", ""expected"": false}",False,field validation,False,PASS
+BB-F-31,TestForm,"{""field"": ""initial"", ""value"": null, ""expected"": false}",False,field validation,False,PASS
+BB-F-32,TestForm,"{""field"": ""length"", ""value"": 0, ""expected"": false}",False,field validation,False,PASS
+BB-F-33,TestForm,"{""field"": ""length"", ""value"": 1, ""expected"": true}",True,field validation,True,PASS
+BB-F-34,TestForm,"{""field"": ""length"", ""value"": 2, ""expected"": true}",True,field validation,True,PASS
+BB-F-35,TestForm,"{""field"": ""length"", ""value"": 99, ""expected"": true}",True,field validation,True,PASS
+BB-F-36,TestForm,"{""field"": ""length"", ""value"": 100, ""expected"": true}",True,field validation,True,PASS
+BB-F-37,TestForm,"{""field"": ""length"", ""value"": 101, ""expected"": false}",False,field validation,False,PASS
+BB-F-38,TestForm,"{""field"": ""length"", ""value"": ""abc"", ""expected"": false}",False,field validation,False,PASS
+BB-F-39,TestForm,"{""field"": ""length"", ""value"": ""1.5"", ""expected"": false}",False,field validation,False,PASS
+BB-F-40,TestForm,"{""field"": ""length"", ""value"": """", ""expected"": false}",False,field validation,False,PASS
+BB-F-41,TestForm,"{""field"": ""length"", ""value"": null, ""expected"": false}",False,field validation,False,PASS
+BB-A-42,AttemptManager.answer,"{""rule"": ""last"", ""expected"": ""COMPLETED""}",COMPLETED,last,COMPLETED,PASS

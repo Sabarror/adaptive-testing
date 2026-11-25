@@ -1,0 +1,22 @@
+digraph Causes {
+  rankdir=LR;
+  node [shape=box,fontname="Arial"];
+  C1 [label="C1: exists + owner"];
+  C2 [label="C2: IN_PROGRESS"];
+  C3 [label="C3: current question"];
+  C4 [label="C4: index 0..3"];
+  C5 [label="C5: final step"];
+  A [label="AND: admission"];
+  N1 [label="NOT C1"]; N2 [label="NOT C2"];
+  N3 [label="NOT C3"]; N4 [label="NOT C4"];
+  Reject [label="OR: Reject / no writes"];
+  Last [label="AND: Finish"];
+  More [label="AND: Next"];
+  N5 [label="NOT C5"];
+  C1 -> A; C2 -> A; C3 -> A; C4 -> A;
+  C1 -> N1; C2 -> N2; C3 -> N3; C4 -> N4;
+  N1 -> Reject; N2 -> Reject; N3 -> Reject; N4 -> Reject;
+  A -> Last; C5 -> Last;
+  A -> More; C5 -> N5; N5 -> More;
+  constraints [label="O: exactly one Reject/Finish/Next\nE: Finish and Next mutually exclusive\nR: Finish/Next require admission\nM: Reject masks Finish/Next",shape=note];
+}

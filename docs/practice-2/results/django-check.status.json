@@ -1,0 +1,8 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python",
+    "manage.py",
+    "check"
+  ],
+  "exit_code": 0
+}

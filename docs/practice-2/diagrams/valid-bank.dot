@@ -1,0 +1,28 @@
+digraph CFG {
+  rankdir=TB;
+  node [shape=box,fontname="Arial"];
+  e [label="e: result = [] / entry"];
+  l [label="l: next question?"];
+  o [label="o: options = list(...)"];
+  a [label="a: A: len == 4?"];
+  b [label="b: B: sum(correct) == 1?"];
+  c [label="c: C: 1 <= difficulty?"];
+  d [label="d: D: difficulty <= 5?"];
+  t [label="t: append(q, options)"];
+  r [label="r: return result"];
+  x [label="x: exit"];
+  e -> l [label=""];
+  l -> o [label="next"];
+  l -> r [label="end"];
+  o -> a [label=""];
+  a -> b [label="T"];
+  a -> l [label="F"];
+  b -> c [label="T"];
+  b -> l [label="F"];
+  c -> d [label="T"];
+  c -> l [label="F"];
+  d -> t [label="T"];
+  d -> l [label="F"];
+  t -> l [label=""];
+  r -> x [label=""];
+}

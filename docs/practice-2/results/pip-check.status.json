@@ -1,0 +1,9 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python",
+    "-m",
+    "pip",
+    "check"
+  ],
+  "exit_code": 0
+}

@@ -1,0 +1,46 @@
+{
+  "strategy": {
+    "N": 6,
+    "E": 6,
+    "P": 1,
+    "V": 2,
+    "independent_path_rank": 2,
+    "basis_paths": [
+      "e c i cl x",
+      "e c d cl x"
+    ]
+  },
+  "valid-bank": {
+    "N": 10,
+    "E": 14,
+    "P": 1,
+    "V": 6,
+    "independent_path_rank": 6,
+    "basis_paths": [
+      "e l r x",
+      "e l o a l r x",
+      "e l o a b l r x",
+      "e l o a b c l r x",
+      "e l o a b c d l r x",
+      "e l o a b c d t l r x"
+    ]
+  },
+  "answer": {
+    "N": 15,
+    "E": 22,
+    "P": 1,
+    "V": 9,
+    "independent_path_rank": 9,
+    "basis_paths": [
+      "e cas u stale x",
+      "e cas u load v invalid x",
+      "e cas u load v ans last complete save ret x",
+      "e cas u load v ans last choose save ret x",
+      "e cas handler x",
+      "e cas u load handler x",
+      "e cas u load v ans handler x",
+      "e cas u load v ans last choose handler x",
+      "e cas u load v ans last choose save handler x"
+    ]
+  }
+}

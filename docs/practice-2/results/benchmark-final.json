@@ -1,0 +1,86 @@
+{
+  "variant": "final",
+  "baseline_commit": "b45d5c667cbaf7d1d2d89f6ecfebd3ca4b617dde",
+  "services_sha256": "1b03b50ee4183a1ac154ba017787d267ae2f595a5a874b18b7d5ff88c711d1b2",
+  "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "django": "5.2.19",
+  "sqlite": "3.49.1",
+  "platform": "Windows-10-10.0.19044-SP0",
+  "debug": false,
+  "sqlite_pragmas": {
+    "journal_mode": "delete",
+    "synchronous": 2,
+    "foreign_keys": 1
+  },
+  "seed": 42,
+  "warmups": 1,
+  "repeats": 7,
+  "results": [
+    {
+      "size": 50,
+      "seconds": [
+        0.034551899999769375,
+        0.02949480000006588,
+        0.023252400000274065,
+        0.029588500000045315,
+        0.029227399999854242,
+        0.026177000000188855,
+        0.03044129999989309
+      ],
+      "median_seconds": 0.02949480000006588,
+      "python_peak_bytes": 369526,
+      "sql": {
+        "total": 9,
+        "insert": 2,
+        "snapshot_insert": 1
+      },
+      "profiled_python_calls": 40142,
+      "snapshots": 50,
+      "behavior_sha256": "b1a2af8fb9bf66fa93a49f483c4b90571531f5050a5fc7095d3f5abb68a87490"
+    },
+    {
+      "size": 500,
+      "seconds": [
+        0.1176698999997825,
+        0.08504320000020016,
+        0.08389479999959804,
+        0.08428830000002563,
+        0.08574199999975463,
+        0.08745559999988473,
+        0.08497569999963162
+      ],
+      "median_seconds": 0.08504320000020016,
+      "python_peak_bytes": 3209352,
+      "sql": {
+        "total": 14,
+        "insert": 7,
+        "snapshot_insert": 6
+      },
+      "profiled_python_calls": 338165,
+      "snapshots": 500,
+      "behavior_sha256": "ad66f004a69c4e352e688a006cbdee5c01be534491c4dd851b90aa287cd26a98"
+    },
+    {
+      "size": 2000,
+      "seconds": [
+        0.3531787000001714,
+        0.30969709999999395,
+        0.35739049999983763,
+        0.3431931000000077,
+        0.3022283000000243,
+        0.3767230999997082,
+        0.3214170999999624
+      ],
+      "median_seconds": 0.3431931000000077,
+      "python_peak_bytes": 13770756,
+      "sql": {
+        "total": 31,
+        "insert": 24,
+        "snapshot_insert": 23
+      },
+      "profiled_python_calls": 1331455,
+      "snapshots": 2000,
+      "behavior_sha256": "ce2ca58b0853fa29f24a807e33f3ba133d3d1d5a4d09dec3bab2f173fd288355"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+Found 1 test(s).
+Skipping setup of unused database(s): default.
+System check identified no issues (0 silenced).
+TRACE {"event": "line", "line": 12, "code": "return max(1, min(5, actual + (1 if correct else -1)))", "locals": {"actual": 1, "correct": false}}
+TRACE {"event": "return", "line": 12, "code": "return max(1, min(5, actual + (1 if correct else -1)))", "locals": {"actual": 1, "correct": false}}
+TRACE {"event": "line", "line": 12, "code": "return max(1, min(5, actual + (1 if correct else -1)))", "locals": {"actual": 1, "correct": true}}
+TRACE {"event": "return", "line": 12, "code": "return max(1, min(5, actual + (1 if correct else -1)))", "locals": {"actual": 1, "correct": true}}
+TRACE {"event": "line", "line": 12, "code": "return max(1, min(5, actual + (1 if correct else -1)))", "locals": {"actual": 5, "correct": true}}
+TRACE {"event": "return", "line": 12, "code": "return max(1, min(5, actual + (1 if correct else -1)))", "locals": {"actual": 5, "correct": true}}
+TRACE {"event": "line", "line": 12, "code": "return max(1, min(5, actual + (1 if correct else -1)))", "locals": {"actual": 5, "correct": false}}
+TRACE {"event": "return", "line": 12, "code": "return max(1, min(5, actual + (1 if correct else -1)))", "locals": {"actual": 5, "correct": false}}
+test_strategy_paths_and_clamps (testing.test_practice2.WhiteBoxTests.test_strategy_paths_and_clamps) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK

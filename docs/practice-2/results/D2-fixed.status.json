@@ -1,0 +1,11 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python",
+    "manage.py",
+    "test",
+    "testing.test_practice2.IntegrationTests.test_start_integrity_failure_reports_scenario_and_rolls_back",
+    "--verbosity",
+    "2"
+  ],
+  "exit_code": 0
+}

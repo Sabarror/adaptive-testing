@@ -1,0 +1,11 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python",
+    "-X",
+    "utf8",
+    "tools/practice2_benchmark.py",
+    "--variant",
+    "baseline"
+  ],
+  "exit_code": 0
+}

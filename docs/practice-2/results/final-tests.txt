@@ -1,0 +1,93 @@
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+Found 51 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: messages, staticfiles
+  Apply all migrations: admin, auth, contenttypes, sessions, testing
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+  Applying testing.0001_initial...test_answer_decision_table_and_rollback (testing.test_practice2.BlackBoxTests.test_answer_decision_table_and_rollback) ... ok
+test_database_error_translation_and_atomicity (testing.test_practice2.BlackBoxTests.test_database_error_translation_and_atomicity) ... ok
+test_form_boundaries_types_missing (testing.test_practice2.BlackBoxTests.test_form_boundaries_types_missing) ... ok
+test_http_invalid_types_and_missing_do_not_mutate (testing.test_practice2.BlackBoxTests.test_http_invalid_types_and_missing_do_not_mutate) ... ok
+test_missing_attempt_rejected_and_last_answer_completed (testing.test_practice2.BlackBoxTests.test_missing_attempt_rejected_and_last_answer_completed) ... ok
+test_bottom_up_domain_driver (testing.test_practice2.IntegrationTests.test_bottom_up_domain_driver) ... ok
+test_bottom_up_orm_driver_then_real_service_and_http (testing.test_practice2.IntegrationTests.test_bottom_up_orm_driver_then_real_service_and_http) ... ok
+test_snapshot_orm_contract (testing.test_practice2.IntegrationTests.test_snapshot_orm_contract) ... ok
+test_snapshot_source_contract (testing.test_practice2.IntegrationTests.test_snapshot_source_contract) ... ok
+test_start_concurrent_recovery_and_operational_error (testing.test_practice2.IntegrationTests.test_start_concurrent_recovery_and_operational_error) ... ok
+test_start_integrity_failure_reports_scenario_and_rolls_back (testing.test_practice2.IntegrationTests.test_start_integrity_failure_reports_scenario_and_rolls_back) ... ok
+test_start_rollback_when_selection_fails (testing.test_practice2.IntegrationTests.test_start_rollback_when_selection_fails) ... ok
+test_top_down_http_with_service_stub (testing.test_practice2.IntegrationTests.test_top_down_http_with_service_stub) ... ok
+test_top_down_service_with_engine_stub (testing.test_practice2.IntegrationTests.test_top_down_service_with_engine_stub) ... ok
+test_seed_idempotent_and_preserves_edits (testing.tests.DemoTests.test_seed_idempotent_and_preserves_edits) ... ok
+test_abort_with_answers_and_result (testing.tests.ScenarioTests.test_abort_with_answers_and_result) ... ok
+test_abort_zero_answers (testing.tests.ScenarioTests.test_abort_zero_answers) ... ok
+test_active_response_does_not_expose_secrets (testing.tests.ScenarioTests.test_active_response_does_not_expose_secrets) ... ok
+test_answer_records_actual_difficulty_and_time (testing.tests.ScenarioTests.test_answer_records_actual_difficulty_and_time) ... ok
+test_complete_and_no_repeated_questions (testing.tests.ScenarioTests.test_complete_and_no_repeated_questions) ... ok
+test_csrf_enforced (testing.tests.ScenarioTests.test_csrf_enforced) ... ok
+test_get_requests_do_not_mutate_attempt (testing.tests.ScenarioTests.test_get_requests_do_not_mutate_attempt) ... ok
+test_insufficient_bank (testing.tests.ScenarioTests.test_insufficient_bank) ... ok
+test_invalid_and_inactive_questions_excluded (testing.tests.ScenarioTests.test_invalid_and_inactive_questions_excluded) ... ok
+test_invalid_option_rolls_back (testing.tests.ScenarioTests.test_invalid_option_rolls_back) ... ok
+test_no_answer_after_completed (testing.tests.ScenarioTests.test_no_answer_after_completed) ... ok
+test_non_current_answer_rejected (testing.tests.ScenarioTests.test_non_current_answer_rejected) ... ok
+test_refresh_login_and_resume (testing.tests.ScenarioTests.test_refresh_login_and_resume) ... ok
+test_repeat_submission_has_no_effect (testing.tests.ScenarioTests.test_repeat_submission_has_no_effect) ... ok
+test_roles_and_foreign_attempts (testing.tests.ScenarioTests.test_roles_and_foreign_attempts) ... ok
+test_sandbox_validation (testing.tests.ScenarioTests.test_sandbox_validation) ... ok
+test_single_active_attempt_and_database_constraint (testing.tests.ScenarioTests.test_single_active_attempt_and_database_constraint) ... ok
+test_snapshot_entire_bank (testing.tests.ScenarioTests.test_snapshot_entire_bank) ... ok
+test_student_full_http_flow (testing.tests.ScenarioTests.test_student_full_http_flow) ... ok
+test_teacher_creates_and_edits_question (testing.tests.ScenarioTests.test_teacher_creates_and_edits_question) ... ok
+test_teacher_creates_publishes_unpublishes_test (testing.tests.ScenarioTests.test_teacher_creates_publishes_unpublishes_test) ... ok
+test_teacher_screens_and_sandbox (testing.tests.ScenarioTests.test_teacher_screens_and_sandbox) ... ok
+test_test_validation_rejects_foreign_topic_and_insufficient_bank (testing.tests.ScenarioTests.test_test_validation_rejects_foreign_topic_and_insufficient_bank) ... ok
+test_unpublished_cannot_start (testing.tests.ScenarioTests.test_unpublished_cannot_start) ... ok
+test_bank_short_circuit (testing.test_practice2.WhiteBoxTests.test_bank_short_circuit) ... ok
+test_selector_empty_and_permutation (testing.test_practice2.WhiteBoxTests.test_selector_empty_and_permutation) ... ok
+test_strategy_paths_and_clamps (testing.test_practice2.WhiteBoxTests.test_strategy_paths_and_clamps) ... ok
+test_actual_level_determines_next_target (testing.tests.AlgorithmTests.test_actual_level_determines_next_target) ... ok
+test_empty_bank_stops (testing.tests.AlgorithmTests.test_empty_bank_stops) ... ok
+test_exact_level_preferred (testing.tests.AlgorithmTests.test_exact_level_preferred) ... ok
+test_increase_decrease_and_boundaries (testing.tests.AlgorithmTests.test_increase_decrease_and_boundaries) ... ok
+test_nearest_and_lower_tie (testing.tests.AlgorithmTests.test_nearest_and_lower_tie) ... ok
+test_sandbox_uses_shared_engine (testing.tests.AlgorithmTests.test_sandbox_uses_shared_engine) ... ok
+test_seed_reproducible_and_no_repeats (testing.tests.AlgorithmTests.test_seed_reproducible_and_no_repeats) ... ok
+test_strategy_polymorphism (testing.tests.AlgorithmTests.test_strategy_polymorphism) ... ok
+test_two_simultaneous_answers_accept_only_one (testing.tests.ConcurrentAnswerTests.test_two_simultaneous_answers_accept_only_one) ... ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 8.434s
+
+OK
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+ OK
+System check identified no issues (0 silenced).
+Демонстрационные данные готовы. Существующие объекты сохранены.
+Учётная запись teacher уже существует: пароль и группы сохранены.
+Учётная запись student1 уже существует: пароль и группы сохранены.
+Учётная запись student2 уже существует: пароль и группы сохранены.
+Демонстрационные данные готовы. Существующие объекты сохранены.

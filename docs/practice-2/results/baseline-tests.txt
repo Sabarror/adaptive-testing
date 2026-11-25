@@ -1,0 +1,76 @@
+Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+Found 34 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: messages, staticfiles
+  Apply all migrations: admin, auth, contenttypes, sessions, testing
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+  Applying testing.0001_initial...test_seed_idempotent_and_preserves_edits (testing.tests.DemoTests.test_seed_idempotent_and_preserves_edits) ... ok
+test_abort_with_answers_and_result (testing.tests.ScenarioTests.test_abort_with_answers_and_result) ... ok
+test_abort_zero_answers (testing.tests.ScenarioTests.test_abort_zero_answers) ... ok
+test_active_response_does_not_expose_secrets (testing.tests.ScenarioTests.test_active_response_does_not_expose_secrets) ... ok
+test_answer_records_actual_difficulty_and_time (testing.tests.ScenarioTests.test_answer_records_actual_difficulty_and_time) ... ok
+test_complete_and_no_repeated_questions (testing.tests.ScenarioTests.test_complete_and_no_repeated_questions) ... ok
+test_csrf_enforced (testing.tests.ScenarioTests.test_csrf_enforced) ... ok
+test_get_requests_do_not_mutate_attempt (testing.tests.ScenarioTests.test_get_requests_do_not_mutate_attempt) ... ok
+test_insufficient_bank (testing.tests.ScenarioTests.test_insufficient_bank) ... ok
+test_invalid_and_inactive_questions_excluded (testing.tests.ScenarioTests.test_invalid_and_inactive_questions_excluded) ... ok
+test_invalid_option_rolls_back (testing.tests.ScenarioTests.test_invalid_option_rolls_back) ... ok
+test_no_answer_after_completed (testing.tests.ScenarioTests.test_no_answer_after_completed) ... ok
+test_non_current_answer_rejected (testing.tests.ScenarioTests.test_non_current_answer_rejected) ... ok
+test_refresh_login_and_resume (testing.tests.ScenarioTests.test_refresh_login_and_resume) ... ok
+test_repeat_submission_has_no_effect (testing.tests.ScenarioTests.test_repeat_submission_has_no_effect) ... ok
+test_roles_and_foreign_attempts (testing.tests.ScenarioTests.test_roles_and_foreign_attempts) ... ok
+test_sandbox_validation (testing.tests.ScenarioTests.test_sandbox_validation) ... ok
+test_single_active_attempt_and_database_constraint (testing.tests.ScenarioTests.test_single_active_attempt_and_database_constraint) ... ok
+test_snapshot_entire_bank (testing.tests.ScenarioTests.test_snapshot_entire_bank) ... ok
+test_student_full_http_flow (testing.tests.ScenarioTests.test_student_full_http_flow) ... ok
+test_teacher_creates_and_edits_question (testing.tests.ScenarioTests.test_teacher_creates_and_edits_question) ... ok
+test_teacher_creates_publishes_unpublishes_test (testing.tests.ScenarioTests.test_teacher_creates_publishes_unpublishes_test) ... ok
+test_teacher_screens_and_sandbox (testing.tests.ScenarioTests.test_teacher_screens_and_sandbox) ... ok
+test_test_validation_rejects_foreign_topic_and_insufficient_bank (testing.tests.ScenarioTests.test_test_validation_rejects_foreign_topic_and_insufficient_bank) ... ok
+test_unpublished_cannot_start (testing.tests.ScenarioTests.test_unpublished_cannot_start) ... ok
+test_actual_level_determines_next_target (testing.tests.AlgorithmTests.test_actual_level_determines_next_target) ... ok
+test_empty_bank_stops (testing.tests.AlgorithmTests.test_empty_bank_stops) ... ok
+test_exact_level_preferred (testing.tests.AlgorithmTests.test_exact_level_preferred) ... ok
+test_increase_decrease_and_boundaries (testing.tests.AlgorithmTests.test_increase_decrease_and_boundaries) ... ok
+test_nearest_and_lower_tie (testing.tests.AlgorithmTests.test_nearest_and_lower_tie) ... ok
+test_sandbox_uses_shared_engine (testing.tests.AlgorithmTests.test_sandbox_uses_shared_engine) ... ok
+test_seed_reproducible_and_no_repeats (testing.tests.AlgorithmTests.test_seed_reproducible_and_no_repeats) ... ok
+test_strategy_polymorphism (testing.tests.AlgorithmTests.test_strategy_polymorphism) ... ok
+test_two_simultaneous_answers_accept_only_one (testing.tests.ConcurrentAnswerTests.test_two_simultaneous_answers_accept_only_one) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 7.564s
+
+OK
+Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
+
+ OK
+System check identified no issues (0 silenced).
+Демонстрационные данные готовы. Существующие объекты сохранены.
+Учётная запись teacher уже существует: пароль и группы сохранены.
+Учётная запись student1 уже существует: пароль и группы сохранены.
+Учётная запись student2 уже существует: пароль и группы сохранены.
+Демонстрационные данные готовы. Существующие объекты сохранены.

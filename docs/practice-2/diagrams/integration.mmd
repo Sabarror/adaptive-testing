@@ -1,0 +1,12 @@
+flowchart TD
+  A[testing.views: HTTP] --> B[testing.services: AttemptManager]
+  A --> F[forms: контекст ввода]
+  A --> D[testing.models / Django ORM]
+  F --> D
+  B --> C[testing.domain: AdaptiveEngine / стратегия / селектор]
+  B --> D
+  D --> DB[(изолированная SQLite)]
+  TD1[нисходящий: Mock AttemptManager] -. заменяет B для A .-> B
+  TD2[нисходящий: EngineStub] -. заменяет C для B .-> C
+  BU1[восходящий: driver] -. вызывает .-> C
+  BU2[восходящий: bank_driver] -. вызывает valid_bank / ORM .-> D

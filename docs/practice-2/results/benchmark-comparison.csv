@@ -1,0 +1,4 @@
+﻿size,before_ms,after_ms,time_improvement_percent,before_python_peak_bytes,after_python_peak_bytes,before_sql,after_sql,before_snapshot_inserts,after_snapshot_inserts,before_calls,after_calls,behavior_equal
+50,26.01,29.495,-13.4,334614,369526,58,9,50,1,50267,40142,True
+500,164.863,85.043,48.42,3162676,3209352,508,14,500,6,441540,338165,True
+2000,648.239,343.193,47.06,13724790,13770756,2008,31,2000,23,1745610,1331455,True

@@ -1,0 +1,10 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python",
+    "-m",
+    "coverage",
+    "report",
+    "--include=testing/domain.py,testing/services.py"
+  ],
+  "exit_code": 0
+}

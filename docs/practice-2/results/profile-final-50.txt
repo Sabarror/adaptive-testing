@@ -1,0 +1,43 @@
+         40142 function calls (39794 primitive calls) in 0.052 seconds
+
+   Ordered by: cumulative time
+   List reduced from 533 to 35 due to restriction <35>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.052    0.052 C:\Users\User\Desktop\adaptive-testing\tools\practice2_benchmark.py:65(run)
+        1    0.000    0.000    0.052    0.052 C:\Users\User\Desktop\adaptive-testing\testing\services.py:26(start)
+    22/13    0.000    0.000    0.025    0.002 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\utils\asyncio.py:15(inner)
+        2    0.000    0.000    0.025    0.012 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\transaction.py:224(__exit__)
+        1    0.000    0.000    0.025    0.025 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\backends\base\base.py:322(commit)
+        1    0.000    0.000    0.025    0.025 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\backends\base\base.py:300(_commit)
+        1    0.025    0.025    0.025    0.025 {method 'commit' of 'sqlite3.Connection' objects}
+    55/53    0.000    0.000    0.014    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:371(__iter__)
+  107/104    0.000    0.000    0.014    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:1952(_fetch_all)
+        1    0.000    0.000    0.012    0.012 C:\Users\User\Desktop\adaptive-testing\testing\services.py:9(valid_bank)
+      8/7    0.000    0.000    0.009    0.001 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\manager.py:85(manager_method)
+        1    0.000    0.000    0.009    0.009 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:1328(_prefetch_related_objects)
+        1    0.000    0.000    0.009    0.009 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:2307(prefetch_related_objects)
+        1    0.000    0.000    0.009    0.009 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:2541(prefetch_one_level)
+      304    0.000    0.000    0.009    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:87(__iter__)
+        1    0.000    0.000    0.006    0.006 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:747(bulk_create)
+        2    0.000    0.000    0.006    0.003 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:1848(_insert)
+        2    0.000    0.000    0.006    0.003 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\sql\compiler.py:1871(execute_sql)
+        1    0.000    0.000    0.005    0.005 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:1878(_batched_insert)
+        1    0.000    0.000    0.005    0.005 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py:783(get_prefetch_querysets)
+        2    0.000    0.000    0.005    0.003 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\sql\compiler.py:1791(as_sql)
+      351    0.003    0.000    0.005    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\base.py:462(__init__)
+        6    0.000    0.000    0.004    0.001 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\sql\compiler.py:1593(execute_sql)
+        1    0.000    0.000    0.004    0.004 C:\Users\User\Desktop\adaptive-testing\testing\services.py:19(_choose)
+      300    0.000    0.000    0.003    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\base.py:576(from_db)
+      560    0.000    0.000    0.003    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\sql\compiler.py:1714(prepare_value)
+       57    0.000    0.000    0.002    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:1489(filter)
+      564    0.000    0.000    0.002    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\fields\__init__.py:1008(get_db_prep_save)
+        4    0.000    0.000    0.002    0.001 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\sql\compiler.py:755(as_sql)
+        8    0.000    0.000    0.002    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\sql\query.py:1630(add_q)
+        8    0.000    0.000    0.002    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\sql\query.py:1659(_add_q)
+      101    0.000    0.000    0.002    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\fields\related_descriptors.py:755(get_queryset)
+        3    0.000    0.000    0.002    0.001 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\base.py:830(save)
+       57    0.000    0.000    0.002    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\query.py:1505(_filter_or_exclude)
+       11    0.000    0.000    0.002    0.000 C:\Users\User\Desktop\adaptive-testing\.venv\Lib\site-packages\django\db\models\sql\query.py:1465(build_filter)
+
+

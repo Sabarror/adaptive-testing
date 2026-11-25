@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python",
+    "-m",
+    "coverage",
+    "run",
+    "--branch",
+    "--source=testing",
+    "manage.py",
+    "test",
+    "--verbosity",
+    "2"
+  ],
+  "exit_code": 0
+}

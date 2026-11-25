@@ -1,0 +1,21 @@
+{
+  "config/settings.py": "38d1e0af8e6169925863057c41280fc9b31ba44568ea1865c8e1e4302ab1ffc8",
+  "requirements-practice2.txt": "76235c94bc1d5f2b87c78336559318e142edcbdf6bd2ea3cd55993f4b3bd2fec",
+  "requirements.txt": "822d8375aede410d248b6f784af20d13afa4e1cebff24b6928e0624897bc9a36",
+  "testing/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "testing/admin.py": "7b352bc625c87c9c767ae7e0fb9fd56829614b24646ad0143224fa50866f3fa1",
+  "testing/context.py": "c965f445bc94ac151a202bbab1226ea85b4b8a9993ed82f95edf6613abda26a1",
+  "testing/demo_data.py": "0ae45a3ece1a8a2bf154153c0896aafa5f4b05756f23f1c90986f3f091870fc3",
+  "testing/domain.py": "03ab301505491bbbe23e3df36877ff3938f1555cd632bf9c104431adac351998",
+  "testing/forms.py": "bb2464bb14f13c4402867fa6e4cfde8da19a13093a66e96227b943e22be57069",
+  "testing/models.py": "1a3391c4cfb0b459c53da71ab0c658feb9b44c617c018bf7118f272ebbfb2c74",
+  "testing/services.py": "1b03b50ee4183a1ac154ba017787d267ae2f595a5a874b18b7d5ff88c711d1b2",
+  "testing/test_practice2.py": "197598ec10409a986228275e13d61a137500266cc0c4a6f459214c86a3edcb08",
+  "testing/tests.py": "c0c1f8177257eab0b598eece731516e5f4c8bd2b36139e0ce10fef899713a81f",
+  "testing/views.py": "a5f0d73726626060f0dee81d7070fff0d539ca7099aa25ac70326675ea6f19f0",
+  "tools/practice2_artifacts.py": "bece45c44be7458d0a6f038ab1172327cbdf820d8d5248cdea0748cf2f6e3985",
+  "tools/practice2_benchmark.py": "f1aeeb262786457e099f4a69da328e8cfc3c790cbe5eab5aff947bda4657d7f0",
+  "tools/practice2_defects.py": "cf542d294ffcc430622fa22883488c889e4574905c332053e36c4e44b2643456",
+  "tools/practice2_run.py": "114541007340b34e6dc64a6f57b0a4ef42ba92cfb50d8a80f1c76cc69e7d79c9",
+  "tools/practice2_verify_artifacts.py": "6beb50bce28a72f9634c57ba7dce72fb637a578a2de3ebfedbad7cbde2367454"
+}

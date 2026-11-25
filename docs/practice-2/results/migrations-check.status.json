@@ -1,0 +1,10 @@
+{
+  "command": [
+    ".\\.venv\\Scripts\\python",
+    "manage.py",
+    "makemigrations",
+    "--check",
+    "--dry-run"
+  ],
+  "exit_code": 0
+}

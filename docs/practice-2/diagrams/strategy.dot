@@ -1,0 +1,16 @@
+digraph CFG {
+  rankdir=TB;
+  node [shape=box,fontname="Arial"];
+  e [label="e: entry"];
+  c [label="c: correct?"];
+  i [label="i: actual + 1"];
+  d [label="d: actual - 1"];
+  cl [label="cl: max(1, min(5, value))"];
+  x [label="x: return / exit"];
+  e -> c [label=""];
+  c -> i [label="T"];
+  c -> d [label="F"];
+  i -> cl [label=""];
+  d -> cl [label=""];
+  cl -> x [label=""];
+}

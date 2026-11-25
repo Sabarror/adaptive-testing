@@ -1,0 +1,17 @@
+{
+  "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19044-SP0",
+  "packages": {
+    "Django": "5.2.19",
+    "coverage": "7.17.5",
+    "pypdf": "7.1.1",
+    "asgiref": "3.13.0",
+    "sqlparse": "0.6.1",
+    "python-dotenv": "1.2.4",
+    "tzdata": "2026.6"
+  },
+  "baseline_commit": "b45d5c667cbaf7d1d2d89f6ecfebd3ca4b617dde",
+  "branch": "practice-2-testing",
+  "sqlite": "3.49.1",
+  "graphviz": "dot - graphviz version 13.1.1 (20250719.2154)"
+}

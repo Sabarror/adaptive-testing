@@ -1,0 +1,3 @@
+# Optional tools for reproducing the practice; application dependencies unchanged.
+coverage==7.17.5
+pypdf==7.1.1

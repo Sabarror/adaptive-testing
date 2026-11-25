@@ -55,3 +55,8 @@ Copy-Item .env.example .env
 Для работы в cmd замените `Copy-Item .env.example .env` на `copy .env.example .env`. Остальные приведённые команды совпадают.
 
 В Linux и macOS используйте `python3.13 -m venv .venv`, путь `.venv/bin/python` вместо `.\.venv\Scripts\python` и `cp .env.example .env` для копирования конфигурации.
+
+## Тестирование и оптимизация ядра
+
+Технические материалы практической работы №2, результаты проверок и команды
+воспроизведения: [docs/practice-2/README.md](docs/practice-2/README.md).

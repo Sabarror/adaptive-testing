@@ -1,0 +1,11 @@
+--- a/testing/domain.py
++++ b/testing/domain.py
+@@ -9,7 +9,7 @@
+ 
+ class StepAdaptiveStrategy(AdaptiveStrategy):
+     def next_target(self, actual, correct):
+-        return max(1, min(5, actual + (1 if correct else -1)))
++        return max(2, min(5, actual + (1 if correct else -1)))
+ 
+ @dataclass(frozen=True)
+ class Candidate:
